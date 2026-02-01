@@ -1,5 +1,7 @@
 // import React, { use } from 'react';
 
+import { Link } from "react-router";
+
 const Card = ({user, onDelete}) => {
     const {name,email,imgUrl,_id }=user
     // console.log(user)
@@ -21,6 +23,7 @@ const Card = ({user, onDelete}) => {
         >
           Delete
         </button>
+      <div className="btn btn-ghost bg-blue-400 mt-3.5 hover:bg-blue-700 border-0"><Link to={`users/${user._id}`}> Update</Link></div>
       </div>
     </div>
 
